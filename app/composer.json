@@ -1,5 +1,6 @@
 {
     "name": "dotcom-poland/symfony-es-example",
+    "description": "Event Sourcing Symfony demo app",
     "type": "project",
     "license": "MIT",
     "minimum-stability": "stable",
