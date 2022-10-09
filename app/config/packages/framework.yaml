@@ -1,0 +1,14 @@
+# see https://symfony.com/doc/current/reference/configuration/framework.html
+framework:
+    secret: '%env(APP_SECRET)%'
+    csrf_protection: false
+    http_method_override: false
+    session: false
+    esi: false
+    fragments: false
+    php_errors:
+        log: true
+
+when@test:
+    framework:
+        test: true
