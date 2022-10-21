@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Test\App\SharedKernel\Es\BrokenEntityExample;
+namespace Test\App\SharedKernel\Es\Implementation\BrokenEntityExample;
 
-use App\Es\Contract\EventCollectionInterface;
-use App\Es\Contract\EventSourceEntityInterface;
-use App\SharedKernel\Es\DefaultEventCollection;
+use App\SharedKernel\Es\Contract\EventCollectionInterface;
+use App\SharedKernel\Es\Contract\EventSourceEntityInterface;
+use App\SharedKernel\Es\Implementation\DefaultEventCollection;
 
 final class EntityWithBrokenFactory implements EventSourceEntityInterface
 {

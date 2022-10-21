@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Es\Contract\Exception;
+namespace App\SharedKernel\Es\Contract\Exception;
 
-use App\Es\Contract\EventSourceEntityInterface;
+use App\SharedKernel\Es\Contract\EventSourceEntityInterface;
 use Throwable;
 
 /**

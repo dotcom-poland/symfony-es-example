@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\SharedKernel\Es;
+namespace App\SharedKernel\Es\Implementation;
 
-use App\Es\Contract\EventCollectionInterface;
-use App\Es\Contract\EventInterface;
+use App\SharedKernel\Es\Contract\EventCollectionInterface;
+use App\SharedKernel\Es\Contract\EventInterface;
 use SplObjectStorage;
 use Traversable;
 

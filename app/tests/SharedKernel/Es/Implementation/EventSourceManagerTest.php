@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Test\App\SharedKernel\Es;
+namespace Test\App\SharedKernel\Es\Implementation;
 
-use App\Es\Contract\Exception\EventSourceEntityNotFoundException;
-use App\Es\Contract\Exception\EventSourceException;
-use App\SharedKernel\Es\DefaultEventCollection;
-use App\SharedKernel\Es\EventSourceManager;
-use App\SharedKernel\Es\EventSourceStoreArray;
+use App\SharedKernel\Es\Contract\Exception\EventSourceEntityNotFoundException;
+use App\SharedKernel\Es\Contract\Exception\EventSourceException;
+use App\SharedKernel\Es\Implementation\DefaultEventCollection;
+use App\SharedKernel\Es\Implementation\EventSourceManager;
+use App\SharedKernel\Es\Implementation\EventSourceStoreArray;
 use PHPUnit\Framework\TestCase;
-use Test\App\SharedKernel\Es\BrokenEntityExample\EntityWithBrokenFactory;
-use Test\App\SharedKernel\Es\BrokenEntityExample\EntityWithBrokenFactoryEvent;
-use Test\App\SharedKernel\Es\EntityExample\BankAccount;
+use Test\App\SharedKernel\Es\Implementation\BrokenEntityExample\EntityWithBrokenFactory;
+use Test\App\SharedKernel\Es\Implementation\BrokenEntityExample\EntityWithBrokenFactoryEvent;
+use Test\App\SharedKernel\Es\Implementation\EntityExample\BankAccount;
 
 final class EventSourceManagerTest extends TestCase
 {

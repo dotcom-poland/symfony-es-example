@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Test\App\SharedKernel\Es\EntityExample;
+namespace Test\App\SharedKernel\Es\Implementation\EntityExample;
 
-use App\Es\Contract\EventInterface;
+use App\SharedKernel\Es\Contract\EventInterface;
 
 /**
  * {@inheritDoc}

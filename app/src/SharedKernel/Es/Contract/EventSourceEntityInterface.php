@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Es\Contract;
+namespace App\SharedKernel\Es\Contract;
 
 /**
  * An event source domain entity.

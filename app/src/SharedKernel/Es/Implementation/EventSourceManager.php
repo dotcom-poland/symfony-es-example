@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\SharedKernel\Es;
+namespace App\SharedKernel\Es\Implementation;
 
-use App\Es\Contract\EventSourceEntityInterface;
-use App\Es\Contract\EventSourceManagerInterface;
-use App\Es\Contract\EventSourceStoreInterface;
-use App\Es\Contract\Exception\EventSourceException;
-use App\Es\Contract\Exception\EventSourceExceptionInterface;
+use App\SharedKernel\Es\Contract\EventSourceEntityInterface;
+use App\SharedKernel\Es\Contract\EventSourceManagerInterface;
+use App\SharedKernel\Es\Contract\EventSourceStoreInterface;
+use App\SharedKernel\Es\Contract\Exception\EventSourceException;
+use App\SharedKernel\Es\Contract\Exception\EventSourceExceptionInterface;
 
 /** {@inheritDoc} */
 final class EventSourceManager implements EventSourceManagerInterface

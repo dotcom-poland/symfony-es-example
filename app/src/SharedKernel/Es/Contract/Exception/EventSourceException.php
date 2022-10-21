@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Es\Contract\Exception;
+namespace App\SharedKernel\Es\Contract\Exception;
 
-use App\Es\Contract\EventSourceEntityInterface;
+use App\SharedKernel\Es\Contract\EventSourceEntityInterface;
 
 /**
  * Exception for any unspecified reason.

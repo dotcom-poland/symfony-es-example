@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace App\Es\Contract\Exception;
+namespace App\SharedKernel\Es\Contract\Exception;
 
-use App\Es\Contract\EventSourceEntityInterface;
+use App\SharedKernel\Es\Contract\EventSourceEntityInterface;
 
 /**
- * Exception for any persistence related errors (i.e. connection or query errors)
+ * Exception to indicate missing events for the requested domain object.
  *
  * @psalm-pure
  */
-final class EventSourcePersistenceException extends \DomainException implements EventSourceExceptionInterface
+final class EventSourceEntityNotFoundException extends \DomainException implements EventSourceExceptionInterface
 {
     /** @var class-string<EventSourceEntityInterface> */
     private string $entityClass;
     private string $entityId;
 
     /** @param class-string<EventSourceEntityInterface> $entityClass */
-    public function __construct(\Throwable $previous, string $entityClass, string $entityId)
+    public function __construct(string $entityClass, string $entityId)
     {
-        parent::__construct('Error during entity persistence', 0, $previous);
+        parent::__construct('Entity not found');
         $this->entityClass = $entityClass;
         $this->entityId = $entityId;
     }

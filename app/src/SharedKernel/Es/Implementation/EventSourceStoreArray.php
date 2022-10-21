@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\SharedKernel\Es;
+namespace App\SharedKernel\Es\Implementation;
 
-use App\Es\Contract\EventInterface;
-use App\Es\Contract\EventSourceEntityInterface;
-use App\Es\Contract\EventSourceStoreInterface;
-use App\Es\Contract\Exception\EventSourceEntityNotFoundException;
-use App\Es\Contract\Exception\EventSourceException;
+use App\SharedKernel\Es\Contract\EventInterface;
+use App\SharedKernel\Es\Contract\EventSourceEntityInterface;
+use App\SharedKernel\Es\Contract\EventSourceStoreInterface;
+use App\SharedKernel\Es\Contract\Exception\EventSourceEntityNotFoundException;
+use App\SharedKernel\Es\Contract\Exception\EventSourceException;
 
 /** {@inheritDoc} */
 final class EventSourceStoreArray implements EventSourceStoreInterface

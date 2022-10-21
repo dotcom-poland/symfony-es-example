@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Test\App\SharedKernel\Es\EntityExample;
+namespace Test\App\SharedKernel\Es\Implementation\EntityExample;
 
-use App\Es\Contract\EventCollectionInterface;
-use App\Es\Contract\EventSourceEntityInterface;
+use App\SharedKernel\Es\Contract\EventCollectionInterface;
+use App\SharedKernel\Es\Contract\EventSourceEntityInterface;
 
 final class BankAccount implements EventSourceEntityInterface
 {

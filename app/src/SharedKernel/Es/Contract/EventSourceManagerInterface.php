@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Es\Contract;
+namespace App\SharedKernel\Es\Contract;
 
-use App\Es\Contract\Exception\EventSourceEntityNotFoundException;
-use App\Es\Contract\Exception\EventSourceExceptionInterface;
-use App\Es\Contract\Exception\EventSourcePersistenceException;
+use App\SharedKernel\Es\Contract\Exception\EventSourceEntityNotFoundException;
+use App\SharedKernel\Es\Contract\Exception\EventSourceExceptionInterface;
+use App\SharedKernel\Es\Contract\Exception\EventSourcePersistenceException;
 
 /**
  * Persistence manager for ES entities.

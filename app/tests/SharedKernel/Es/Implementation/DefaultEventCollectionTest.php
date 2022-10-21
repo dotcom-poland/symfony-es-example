@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Test\App\SharedKernel\Es;
+namespace Test\App\SharedKernel\Es\Implementation;
 
-use App\SharedKernel\Es\DefaultEventCollection;
+use App\SharedKernel\Es\Implementation\DefaultEventCollection;
 use PHPUnit\Framework\TestCase;
-use Test\App\SharedKernel\Es\EntityExample\TransactionEvent;
+use Test\App\SharedKernel\Es\Implementation\EntityExample\TransactionEvent;
 
 final class DefaultEventCollectionTest extends TestCase
 {
