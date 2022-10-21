@@ -24,7 +24,7 @@ final class BankAccount implements EventSourceEntityInterface
         string $identifier,
         EventCollectionInterface $collection,
         iterable $pastEvents
-    ): EventSourceEntityInterface {
+    ): static {
         $instance = new self($identifier, $collection);
 
         foreach ($pastEvents as $event) {

@@ -11,12 +11,14 @@ interface EventSourceEntityInterface
 {
     /**
      * Entity factory.
+     *
+     * @param iterable<EventInterface> $pastEvents
      */
     public static function create(
         string $identifier,
         EventCollectionInterface $collection,
         iterable $pastEvents
-    ): EventSourceEntityInterface;
+    ): static;
 
     /**
      * Return the ID of this entity.

@@ -7,6 +7,8 @@ namespace App\SharedKernel\Es;
 use App\Es\Contract\EventInterface;
 use App\Es\Contract\EventSourceEntityInterface;
 use App\Es\Contract\EventSourceStoreInterface;
+use App\Es\Contract\Exception\EventSourceEntityNotFoundException;
+use App\Es\Contract\Exception\EventSourceException;
 
 /** {@inheritDoc} */
 final class EventSourceStoreArray implements EventSourceStoreInterface
@@ -24,11 +26,15 @@ final class EventSourceStoreArray implements EventSourceStoreInterface
             $this->events[$entityClass][$entityId] = [];
         }
 
-        foreach ($events as $event) {
-            $this->events[$entityClass][$entityId][] = [
-                \get_class($event),
-                $event->toArray(),
-            ];
+        try {
+            foreach ($events as $event) {
+                $this->events[$entityClass][$entityId][] = [
+                    \get_class($event),
+                    $event->toArray(),
+                ];
+            }
+        } catch (\Throwable $exception) {
+            throw new EventSourceException($exception, $entityClass, $entityId);
         }
     }
 
@@ -39,8 +45,16 @@ final class EventSourceStoreArray implements EventSourceStoreInterface
     ): iterable {
         $eventsData = $this->events[$entityClass][$entityId] ?? [];
 
-        foreach ($eventsData as [$eventClass, $eventPayload]) {
-            yield $eventClass::fromArray($eventPayload);
+        if (empty($eventsData)) {
+            throw new EventSourceEntityNotFoundException($entityClass, $entityId);
+        }
+
+        try {
+            foreach ($eventsData as [$eventClass, $eventPayload]) {
+                yield $eventClass::fromArray($eventPayload);
+            }
+        } catch (\Throwable $exception) {
+            throw new EventSourceException($exception, $entityClass, $entityId);
         }
     }
 }
