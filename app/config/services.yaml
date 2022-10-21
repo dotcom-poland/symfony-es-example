@@ -10,3 +10,6 @@ services:
         resource: '../src/'
         exclude:
             - '../src/Kernel.php'
+
+    App\SharedKernel\Es\Contract\EventSourceStoreInterface:
+        '@App\SharedKernel\Es\Implementation\EventSourceStoreDbal'

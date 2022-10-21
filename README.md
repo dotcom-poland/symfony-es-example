@@ -16,6 +16,12 @@ Symfony & Event Sourcing demo application
 2. Copy `docker-compose.custom.yml.dist` to `docker-compose.custom.yml` and modify if necessary
 3. `docker compose up -d`
 
+## Setup
+
+1. Go to the container `docker-compose exec php sh`
+2. Install vendors `composer install -o`
+3. Execute database migrations `bin/console doctrine:migrations:migrate -n`
+
 ## Stopping
 
 `docker compose down`
